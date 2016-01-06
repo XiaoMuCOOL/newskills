@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>初识React</title>
+  <script src="react-0.14.5/build/react.js"></script>
+  <script src="react-0.14.5/build/react-dom.js"></script>
+  <script src="../common/jquery-2.1.4.min.js"></script>
+  <script src="../common/browser.min.js"></script>
+</head>
+<body>
+  <div id="box">内容</div>
+  <Times name="倒计时" />
+</body>
+<script type="text/babel">
+  var Times = React.createClass({
+    getInitialState : function(){
+      return {time: 0};
+    },
+    componentWillMount : function(){
+      //插入真实DOM 前
+    },
+    componentDidMount : function(){
+      //插入真实DOM 后
+      var _this = this;
+      _this.t = setInterval(function(){
+        _this.setState({time:++_this.state.time});
+      },1000);
+    },
+    componentWillUpdate : function(objectNextProps, objectNextState){
+      //重新渲染 前
+    },
+    componentDidUpdate : function(objectPrevProps, objectPrevState){
+      //重新渲染 后
+    },
+    componentWillUnmount : function(){
+      //移出真实DOM 前
+      clearInterval(this.t);
+    },
+    componentWillReceiveProps : function(objectNextProps){
+      //已加载组件收到新的参数时调用
+    },
+    //shouldComponentUpdate : function(objectNextProps, objectNextProps){
+      //组件判断是否重新渲染时调用
+    //},
+    render:function(){
+      return (
+        <div>{this.props.name}:{this.state.time}</div>
+      )
+    }
+  });
+  
+  ReactDOM.render(
+    <Times name="计时器" />,
+    document.getElementById('box')
+  );
+
+  // // 一个 ES6 箭头函数定义的无状态函数式组件
+  // var Aquarium = (props) => {  
+  //   var fish = getFish(props.species);  
+  //   return <Tank>{fish}</Tank>;
+  // };
+  // // 或者更加简化的版本
+  // var Aquarium = ({species}) => (  
+  //   <Tank>
+  //     {getFish(species)}
+  //   </Tank>
+  // );
+  // // 最终使用方式: 
+  // <Aquarium species="rainbowfish" />
+</script>
+</html>
