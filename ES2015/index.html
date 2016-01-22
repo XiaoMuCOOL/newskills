@@ -1,0 +1,84 @@
+<!doctype html> 
+<html> 
+<head> 
+  <meta charset="utf-8">
+  <title>初识ES2015</title>
+  <script src="../common/jquery-2.1.4.min.js"></script>
+  <script src="../common/browser.min.js"></script>
+  <style type="text/css">
+    body{
+      padding: 0;
+      margin: 0;
+    }
+    header{
+      width: 100%;
+      height: 80px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      background: black;
+      opacity: 0.7;
+      z-index: 99;
+    }
+    header h1{
+      color: white;
+      text-align: center;
+    }
+    footer{
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: auto;
+      bottom: 0;
+      background: black;
+      opacity: 0.7;
+      z-index: 99;
+    }
+    footer p{
+      margin: 10px 0;
+      color: white;
+      text-align: center;
+    }
+    section{
+      padding: 100px 0;
+      text-align: center;
+      z-index: 1;
+    }
+    .copy{
+      padding: 0;
+      margin: 0 20px 5px 0;
+      height: 14px;
+      font-size: 14px;
+      float: right;
+    }
+    .copy a{
+      color: red;
+    }
+  </style>
+  <style type="text/css">
+    #div{
+      
+    }
+  </style>
+  <script type="text/babel">
+    var name = "XiaoMu", time = "today";
+    var str = `Hello ${name}, how are you ${time}?`;
+    time = "today2";
+    $(".box1").text(str);
+    
+  </script>
+</head>
+<body>
+  <header>
+    <h1>问题：初识ES2015</h1>
+  </header>
+  <section>
+    <div class="box1"></div>
+  </section>
+  <footer>
+    <p>结论：</p>
+    <p>This is 结论.</p>
+    <p class="copy"><a href="#" title="QQ:895355044">Powered by Gavin(小牧COOL)</a></p>
+  </footer>
+</body>
+</html>
