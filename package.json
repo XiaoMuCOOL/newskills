@@ -1,0 +1,35 @@
+{
+  "name": "newskills",
+  "description": "newskills,各种新技术的最佳实践,技能列表.",
+  "version": "0.1",
+  "author": {
+    "name": "小牧COOL",
+    "url": "http://weibo.com/xiaomucool",
+    "QQ":"895355044",
+    "QQGroup":"215259343"
+  },
+  "homepage": "https://github.com/XiaoMuCOOL/newskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XiaoMuCOOL/newskills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XiaoMuCOOL/newskills/issues"
+  },
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://github.com/XiaoMuCOOL/newskills/blob/master/LICENSE"
+    }
+  ],
+  "keywords": [
+    "React",
+    "Redux",
+    "Webpack",
+    "XiaoMuCOOL"
+  ],
+  "devDependencies": {
+    "webpack": "*"
+  },
+  "readme": "ERROR: No README data found!"
+}

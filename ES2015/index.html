@@ -61,11 +61,17 @@
     }
   </style>
   <script type="text/babel">
+    // var fn = ()=>{
+    //   return `Hello ${name}, how are you ${time}?`;
+    // }
+    //省略写法
+    var fn = ()=>`Hello ${name}, how are you ${time}?`;
     var name = "XiaoMu", time = "today";
-    var str = `Hello ${name}, how are you ${time}?`;
-    time = "today2";
+    var str = fn();
     $(".box1").text(str);
-    
+    time = "tomorrow";
+    str = fn();
+    $(".box2").text(str);
   </script>
 </head>
 <body>
@@ -74,6 +80,7 @@
   </header>
   <section>
     <div class="box1"></div>
+    <div class="box2"></div>
   </section>
   <footer>
     <p>结论：</p>
