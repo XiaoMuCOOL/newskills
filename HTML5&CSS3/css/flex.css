@@ -1,0 +1,122 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+section{
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  background: #FFC0CB;
+}
+.container div{
+  height: 100px;
+  margin: 0 10px;
+  background: #E64A19;
+  border-radius: 5px;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: flex-start; /*| flex-end | center | space-between | space-around*/
+  align-items: flex-start; /*| flex-end | center | baseline | stretch*/
+  align-content: flex-start; /*| flex-end | center | space-between | space-around | stretch*/
+}
+.item{
+  order: 1;
+  flex:1;
+  align-self: center; /*| flex-end | center | baseline | stretch*/
+}
+
+.boson{
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background: #333;
+  mix-blend-mode: darken;
+  display: flex;
+}
+.boson span{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: red;
+  margin: 3px;
+}
+
+.count1{
+  justify-content: center;
+}
+.count1 span{
+  align-self: center;
+}
+
+.count2{
+  flex-direction:column;
+  justify-content: space-between;
+}
+.count2 span:nth-child(2){
+  align-self: flex-end;
+}
+
+.count3{
+  flex-direction:column;
+}
+.count3 span{
+  flex: 0 0 10px;
+  flex-basis:10px;
+}
+.count3 span:nth-child(2){
+  align-self: center;
+}
+.count3 span:nth-child(3){
+  align-self: flex-end;
+}
+
+.count4{
+  flex-direction:column;
+}
+.count4 .column{
+  height: 50%;
+  display: flex;
+  flex-direction:row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.count4 .column:nth-child(2){
+  align-items: flex-end;
+}
+
+.count5{
+  flex-direction:column;
+}
+.count5>span{
+  align-self: center;
+}
+.count5 .column{
+  display: flex;
+  flex-direction:row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.count5 .column:nth-child(2){
+  align-items: flex-end;
+}
+
+.count6{
+  flex-direction:row;
+}
+.count6 .column{
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  width: 50%;
+}
+.count6 .column:nth-child(2) span{
+  align-self: flex-end;
+}

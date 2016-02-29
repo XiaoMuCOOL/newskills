@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object</title>
+    <script src="../common/jquery-2.1.4.min.js"></script>
+    <script src="../common/browser.min.js"></script>
+  </head>
+  <body>
+    
+  </body>
+  <script type="text/babel">
+    class a{
+      //this.i = "ss";
+    }
+    //var Graphic = function(data){
+    //  this.num = 1;
+    //  this.init();
+    //}
+//
+    //Graphic.prototype = {
+    //  init:function(){
+    //    console.log(this.num);
+    //  }
+    //}
+    //var graphic = new Graphic();
+//
+    //var db = function() {
+    //  var data = 1;
+    //  function getData(){
+    //    return data;
+    //  }
+    //  this.init();
+    //};
+    //db.prototype = {
+    //  init:function(){
+    //    console.log(new db().data);
+    //  }
+    //}
+    //var b = new db();
+  </script>
+  <script type="text/javascript">
+    var db = function() {
+      var data = 1;
+      db.prototype.getData = function(){
+        return data;
+      }
+      this.init();
+    };
+    db.prototype = {
+      init:function(){
+        console.log(this.getData());
+      }
+    }
+    var b = new db();
+
+
+    var test = function(){
+      var ss = 1;
+      test.prototype.getSS = function(){
+        return ss;
+      }
+    }
+    test.prototype.init = function(){
+        console.log(this.getSS())
+    }
+    var ww = new test();
+    ww.init();
+
+  </script>
+</html>
